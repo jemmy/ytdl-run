@@ -25,7 +25,7 @@ async function install () {
     const filename = isWin ? 'youtube-dl.exe' : 'youtube-dl'
     const dirPath = path.join(__dirname, 'bin')
 
-    await download('https://yt-dl.org/downloads/latest/' + filename, dirPath)
+    await download('https://github.com/ytdl-org/youtube-dl/releases/download/2021.12.17/' + filename, dirPath)
     const binPath = path.join(dirPath, filename)
     await fs.chmod(binPath, 0o755)
 
